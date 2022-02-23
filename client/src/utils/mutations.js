@@ -23,3 +23,40 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const SAVE_BOOK = gql`
+  mutation saveBook($book: BookInput!) {
+      saveBook(book: $book) {
+          _id
+          username
+          email
+          bookCount
+          savedBooks {
+          bookId
+          image
+          link
+          title
+          description
+          authors
+          }
+      }
+  }
+  `
+
+export const REMOVE_BOOK = gql`
+mutation removeBook($bookId: String!) {
+    removeBook(bookId: $bookId) {
+        _id
+        username
+        email
+        bookCount
+        savedBooks {
+            bookId
+            image
+            link
+            title
+            description
+            authors
+    }
+}
+`

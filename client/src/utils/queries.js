@@ -21,24 +21,6 @@ export const QUERY_ME = gql`
 `;
 
 
-// query user($username: String!) {
-//     user(username: $username) {
-//       _id
-//       username
-//       email
-//       bookCount
-//       savedBooks {
-//           bookId
-//           image
-//           link
-//           title
-//           description
-//           authors
-//       }
-//       }
-//     }
-//   }
-// `
 
 
 
