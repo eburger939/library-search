@@ -1,6 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
-const { Book } = require('../models/Book')
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -34,7 +33,7 @@ const resolvers = {
     
           const token = signToken(user);
     
-          return { token };
+          return { token, user };
         },
 
         saveBook: async (parent, { bookData }, context) => {
